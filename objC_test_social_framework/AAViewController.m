@@ -168,7 +168,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 
 - (IBAction)onCustomComposePressed:(UIButton *)sender {
     AAComposeViewController *vc = [[AAComposeViewController alloc] init];
-    [self __presentViewController:vc];
+    [self __presentViewController:vc];    
 }
 
 @end

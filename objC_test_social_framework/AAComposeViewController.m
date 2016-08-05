@@ -9,8 +9,12 @@
 #define SHOW_ME NSLog(@"%s", __PRETTY_FUNCTION__);
 
 #import "AAComposeViewController.h"
+#import "AAImageSelectionViewController.h"
 
 @interface AAComposeViewController ()
+
+@property (nonatomic, strong) UIImage *sourceImage;
+@property (nonatomic, strong) NSURL *sourceURL;
 
 @end
 
@@ -21,6 +25,16 @@
     
     self.placeholder = @"Pass here something";
     self.charactersRemaining = @99;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.view.backgroundColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.tintColor = [UIColor yellowColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+//    [[self navigationItem] setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sample-icon"]]];
+    self.navigationItem.title = @"Ololo";
 }
 
 - (void)presentationAnimationDidFinish {
@@ -59,22 +73,9 @@
     [super validateContent];
 }
 
-- (NSArray *)configurationItems {
-    SHOW_ME
-    
-//    return [super configurationItems];
-    
-    SLComposeSheetConfigurationItem *item = [[SLComposeSheetConfigurationItem alloc] init];
-    
-    item.title = @"Tap me baby";
-    item.value = @"Value? I don't saw it.";
-    item.valuePending = YES;
-    
-    item.tapHandler = ^{
-        NSLog(@"Tapped!");
-    };
-    
-    return @[ item ];
+- (NSArray<SLComposeSheetConfigurationItem *> *)configurationItems {
+    return @[ [self imageItem],
+              [self urlItem] ];
 }
 
 - (void)reloadConfigurationItems {
@@ -104,6 +105,52 @@
     view.backgroundColor = [UIColor orangeColor];
     
     return view;
+}
+
+- (SLComposeSheetConfigurationItem *)imageItem {
+    SLComposeSheetConfigurationItem *item = [[SLComposeSheetConfigurationItem alloc] init];
+    
+    item.title = @"Tap to get image";
+    item.value = @"no image";
+
+    __weak __typeof(item) weakItem = item;
+    __weak __typeof(self) weakSelf = self;
+
+    item.tapHandler = ^{
+        weakItem.valuePending = YES;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakItem.valuePending = NO;
+            
+            weakSelf.sourceImage = [UIImage imageNamed:@"sample"];
+            weakItem.value = @"sample";
+        });
+    };
+    
+    return item;
+}
+
+- (SLComposeSheetConfigurationItem *)urlItem {
+    SLComposeSheetConfigurationItem *item = [[SLComposeSheetConfigurationItem alloc] init];
+    
+    item.title = @"Tap to set URL";
+    item.value = @"no URL";
+
+    __weak __typeof(item) weakItem = item;
+    __weak __typeof(self) weakSelf = self;
+    
+    item.tapHandler = ^{
+        weakItem.valuePending = YES;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakItem.valuePending = NO;
+            
+            weakSelf.sourceURL = [NSURL URLWithString:@"https://github.com/podaenur"];
+            weakItem.value = @"github.com/podaenur";
+        });
+    };
+    
+    return item;
 }
 
 @end

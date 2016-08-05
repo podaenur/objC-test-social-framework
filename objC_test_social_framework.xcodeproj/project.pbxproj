@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
+		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F191D53802E00A33C35 /* AAApplication.m */; };
 		90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */; };
 		90C5F4AD1D53571C00997717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C5F4AC1D53571C00997717 /* main.m */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
+		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
+		907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAImageSelectionViewController.xib; sourceTree = "<group>"; };
 		90B32F181D53802E00A33C35 /* AAApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAApplication.h; sourceTree = "<group>"; };
 		90B32F191D53802E00A33C35 /* AAApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAApplication.m; sourceTree = "<group>"; };
 		90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAComposeViewController.h; sourceTree = "<group>"; };
@@ -76,6 +81,9 @@
 				90C5F4B21D53571C00997717 /* AAViewController.m */,
 				90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */,
 				90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */,
+				907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */,
+				907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */,
+				907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */,
 				90C5F4B41D53571C00997717 /* Main.storyboard */,
 				90C5F4B71D53571C00997717 /* Assets.xcassets */,
 				90C5F4B91D53571C00997717 /* LaunchScreen.storyboard */,
@@ -152,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C5F4BB1D53571C00997717 /* LaunchScreen.storyboard in Resources */,
+				907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */,
 				90C5F4B81D53571C00997717 /* Assets.xcassets in Resources */,
 				90C5F4B61D53571C00997717 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +177,7 @@
 				90C5F4B31D53571C00997717 /* AAViewController.m in Sources */,
 				90C5F4B01D53571C00997717 /* AppDelegate.m in Sources */,
 				90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */,
+				907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */,
 				90C5F4AD1D53571C00997717 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
