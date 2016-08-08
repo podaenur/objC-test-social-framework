@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0830D15BBF90CCD0247F1C /* libPods-objC_test_social_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F191D53802E00A33C35 /* AAApplication.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.release.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.release.xcconfig"; sourceTree = "<group>"; };
 		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
 		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
 		907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAImageSelectionViewController.xib; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		90C5F4BA1D53571C00997717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C5F4BC1D53571C00997717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C5F4C21D53572F00997717 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objC_test_social_framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,18 +51,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C5F4C31D53572F00997717 /* Social.framework in Frameworks */,
+				3D0830D15BBF90CCD0247F1C /* libPods-objC_test_social_framework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1462A7C43AA569CB570EE3B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85199B173D3F0DA516E0F486 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */,
+				71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		90C5F49F1D53571C00997717 = {
 			isa = PBXGroup;
 			children = (
 				90C5F4C21D53572F00997717 /* Social.framework */,
 				90C5F4AA1D53571C00997717 /* objC_test_social_framework */,
 				90C5F4A91D53571C00997717 /* Products */,
+				85199B173D3F0DA516E0F486 /* Pods */,
+				1462A7C43AA569CB570EE3B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90C5F4BF1D53571C00997717 /* Build configuration list for PBXNativeTarget "objC_test_social_framework" */;
 			buildPhases = (
+				0A324E3C9A4A0BFC05AB4875 /* [CP] Check Pods Manifest.lock */,
 				90C5F4A41D53571C00997717 /* Sources */,
 				90C5F4A51D53571C00997717 /* Frameworks */,
 				90C5F4A61D53571C00997717 /* Resources */,
+				B383AD61AF3F7F560539B1F4 /* [CP] Embed Pods Frameworks */,
+				53BD34CBD80EFB302F596813 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A324E3C9A4A0BFC05AB4875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53BD34CBD80EFB302F596813 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B383AD61AF3F7F560539B1F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90C5F4A41D53571C00997717 /* Sources */ = {
@@ -290,6 +365,7 @@
 		};
 		90C5F4C01D53571C00997717 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = objC_test_social_framework/Info.plist;
@@ -302,6 +378,7 @@
 		};
 		90C5F4C11D53571C00997717 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = objC_test_social_framework/Info.plist;
