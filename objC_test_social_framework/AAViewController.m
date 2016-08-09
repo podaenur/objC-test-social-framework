@@ -9,17 +9,20 @@
 @import Social;
 #import "AAViewController.h"
 #import "AAComposeViewController.h"
+#import "UIStoryboard+AAHelper.h"
+#import "AASharingData.h"
 
 typedef NS_ENUM(NSUInteger, AAEntityType) {
     AAEntityTypeString = 0,
     AAEntityTypeImage = 1,
-    AAEntityTypeURL = 2
+    AAEntityTypeURL = 2,
 };
 
 typedef NS_ENUM(NSUInteger, AANetworkType) {
     AANetworkTypeActivity = 0,
     AANetworkTypeFacebook = 1,
     AANetworkTypeTwitter = 2,
+    AANetworkTypeInstagram = 3,
 };
 
 @interface AAViewController ()
@@ -78,14 +81,6 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 
 #pragma mark - Private
 
-- (NSArray *)sharingPack {
-    NSString *sharingString = @"Hello world";
-    UIImage *sharingImage = [UIImage imageNamed:@"sample"];
-    NSURL *sharingURL = [NSURL URLWithString:@"https://github.com/podaenur"];
-    
-    return @[ sharingString, sharingImage, sharingURL ];
-}
-
 - (void)__pushViewController:(UIViewController *)vc {
     if ([vc isKindOfClass:[UINavigationController class]] && ((UINavigationController *)vc).topViewController) {
         [self.navigationController pushViewController:((UINavigationController *)vc).topViewController animated:YES];
@@ -116,7 +111,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:serviceType];
         vc.completionHandler = self.sharingCompletionHandler;
         
-        NSArray *pack = [self sharingPack];
+        NSArray *pack = [AASharingData sharingPack];
         [vc setInitialText:pack[AAEntityTypeString]];
         [vc addImage:pack[AAEntityTypeImage]];
         [vc addURL:pack[AAEntityTypeURL]];
@@ -128,7 +123,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 }
 
 - (void)activitySharing {
-    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:[self sharingPack] applicationActivities:nil];
+    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:[AASharingData sharingPack] applicationActivities:nil];
     
     activity.completionWithItemsHandler = self.activityCompletionHandler;
     
@@ -141,6 +136,10 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 
 - (void)twitterNetwork {
     [self shareWithServiceType:SLServiceTypeTwitter];
+}
+
+- (void)instagramSharing {
+    [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAAInstagramViewControllerIdentifier]];
 }
 
 #pragma mark - Actions
@@ -159,6 +158,9 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
             break;
         case AANetworkTypeTwitter:
             [self twitterNetwork];
+            break;
+        case AANetworkTypeInstagram:
+            [self instagramSharing];
             break;
             
         default:

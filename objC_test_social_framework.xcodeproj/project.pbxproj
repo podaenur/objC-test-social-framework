@@ -10,6 +10,9 @@
 		3D0830D15BBF90CCD0247F1C /* libPods-objC_test_social_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
+		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
+		909E1BF41D58B55F0097F0C2 /* UIStoryboard+AAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BF31D58B55F0097F0C2 /* UIStoryboard+AAHelper.m */; };
+		909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BF81D58C9140097F0C2 /* AASharingData.m */; };
 		90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F191D53802E00A33C35 /* AAApplication.m */; };
 		90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */; };
 		90C5F4AD1D53571C00997717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C5F4AC1D53571C00997717 /* main.m */; };
@@ -26,6 +29,13 @@
 		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
 		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
 		907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAImageSelectionViewController.xib; sourceTree = "<group>"; };
+		909E1BE81D58AFB10097F0C2 /* AAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAConstants.h; sourceTree = "<group>"; };
+		909E1BE91D58B33A0097F0C2 /* AAInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAInstagramViewController.h; sourceTree = "<group>"; };
+		909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAInstagramViewController.m; sourceTree = "<group>"; };
+		909E1BF21D58B55F0097F0C2 /* UIStoryboard+AAHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+AAHelper.h"; sourceTree = "<group>"; };
+		909E1BF31D58B55F0097F0C2 /* UIStoryboard+AAHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+AAHelper.m"; sourceTree = "<group>"; };
+		909E1BF71D58C9140097F0C2 /* AASharingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASharingData.h; sourceTree = "<group>"; };
+		909E1BF81D58C9140097F0C2 /* AASharingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASharingData.m; sourceTree = "<group>"; };
 		90B32F181D53802E00A33C35 /* AAApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAApplication.h; sourceTree = "<group>"; };
 		90B32F191D53802E00A33C35 /* AAApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAApplication.m; sourceTree = "<group>"; };
 		90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAComposeViewController.h; sourceTree = "<group>"; };
@@ -75,14 +85,84 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		909E1BEC1D58B3530097F0C2 /* _ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90C5F4B11D53571C00997717 /* AAViewController.h */,
+				90C5F4B21D53571C00997717 /* AAViewController.m */,
+				909E1BE91D58B33A0097F0C2 /* AAInstagramViewController.h */,
+				909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */,
+				90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */,
+				90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */,
+				907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */,
+				907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */,
+				909E1BED1D58B3660097F0C2 /* _Xibs */,
+			);
+			name = _ViewControllers;
+			sourceTree = "<group>";
+		};
+		909E1BED1D58B3660097F0C2 /* _Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */,
+			);
+			name = _Xibs;
+			sourceTree = "<group>";
+		};
+		909E1BEE1D58B3720097F0C2 /* _Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				90C5F4B41D53571C00997717 /* Main.storyboard */,
+				90C5F4B91D53571C00997717 /* LaunchScreen.storyboard */,
+			);
+			name = _Storyboards;
+			sourceTree = "<group>";
+		};
+		909E1BEF1D58B38F0097F0C2 /* _Constants */ = {
+			isa = PBXGroup;
+			children = (
+				909E1BE81D58AFB10097F0C2 /* AAConstants.h */,
+			);
+			name = _Constants;
+			sourceTree = "<group>";
+		};
+		909E1BF01D58B39D0097F0C2 /* _System */ = {
+			isa = PBXGroup;
+			children = (
+				90B32F181D53802E00A33C35 /* AAApplication.h */,
+				90B32F191D53802E00A33C35 /* AAApplication.m */,
+				90C5F4AE1D53571C00997717 /* AppDelegate.h */,
+				90C5F4AF1D53571C00997717 /* AppDelegate.m */,
+			);
+			name = _System;
+			sourceTree = "<group>";
+		};
+		909E1BF11D58B5430097F0C2 /* _Categories */ = {
+			isa = PBXGroup;
+			children = (
+				909E1BF21D58B55F0097F0C2 /* UIStoryboard+AAHelper.h */,
+				909E1BF31D58B55F0097F0C2 /* UIStoryboard+AAHelper.m */,
+			);
+			name = _Categories;
+			sourceTree = "<group>";
+		};
+		909E1BF61D58C8FE0097F0C2 /* _Data */ = {
+			isa = PBXGroup;
+			children = (
+				909E1BF71D58C9140097F0C2 /* AASharingData.h */,
+				909E1BF81D58C9140097F0C2 /* AASharingData.m */,
+			);
+			name = _Data;
+			sourceTree = "<group>";
+		};
 		90C5F49F1D53571C00997717 = {
 			isa = PBXGroup;
 			children = (
-				90C5F4C21D53572F00997717 /* Social.framework */,
-				90C5F4AA1D53571C00997717 /* objC_test_social_framework */,
-				90C5F4A91D53571C00997717 /* Products */,
-				85199B173D3F0DA516E0F486 /* Pods */,
 				1462A7C43AA569CB570EE3B6 /* Frameworks */,
+				90C5F4AA1D53571C00997717 /* objC_test_social_framework */,
+				85199B173D3F0DA516E0F486 /* Pods */,
+				90C5F4A91D53571C00997717 /* Products */,
+				90C5F4C21D53572F00997717 /* Social.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,20 +177,13 @@
 		90C5F4AA1D53571C00997717 /* objC_test_social_framework */ = {
 			isa = PBXGroup;
 			children = (
-				90C5F4AE1D53571C00997717 /* AppDelegate.h */,
-				90C5F4AF1D53571C00997717 /* AppDelegate.m */,
-				90B32F181D53802E00A33C35 /* AAApplication.h */,
-				90B32F191D53802E00A33C35 /* AAApplication.m */,
-				90C5F4B11D53571C00997717 /* AAViewController.h */,
-				90C5F4B21D53571C00997717 /* AAViewController.m */,
-				90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */,
-				90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */,
-				907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */,
-				907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */,
-				907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */,
-				90C5F4B41D53571C00997717 /* Main.storyboard */,
+				909E1BF61D58C8FE0097F0C2 /* _Data */,
+				909E1BF11D58B5430097F0C2 /* _Categories */,
+				909E1BEF1D58B38F0097F0C2 /* _Constants */,
+				909E1BEE1D58B3720097F0C2 /* _Storyboards */,
+				909E1BF01D58B39D0097F0C2 /* _System */,
+				909E1BEC1D58B3530097F0C2 /* _ViewControllers */,
 				90C5F4B71D53571C00997717 /* Assets.xcassets */,
-				90C5F4B91D53571C00997717 /* LaunchScreen.storyboard */,
 				90C5F4BC1D53571C00997717 /* Info.plist */,
 				90C5F4AB1D53571C00997717 /* Supporting Files */,
 			);
@@ -249,10 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */,
+				909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */,
 				90C5F4B31D53571C00997717 /* AAViewController.m in Sources */,
 				90C5F4B01D53571C00997717 /* AppDelegate.m in Sources */,
 				90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */,
 				907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */,
+				909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */,
+				909E1BF41D58B55F0097F0C2 /* UIStoryboard+AAHelper.m in Sources */,
 				90C5F4AD1D53571C00997717 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
