@@ -211,6 +211,7 @@
 		90C5F4AB1D53571C00997717 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D1B24701D674E860041F4EC /* GoogleService-Info.plist */,
 				90C5F4AC1D53571C00997717 /* main.m */,
 			);
 			name = "Supporting Files";
