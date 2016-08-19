@@ -20,4 +20,6 @@
 #define OK_PUBLIC_KEY @"CBAFGDGLEBABABABA"
 #define OK_SECRET_KEY @"02A599608FB5D9BE868DB11C"
 
+#define GOOGLE_CLIENT_ID @"639911444271-fbmum2biat4o10dilihariqt4g356gnd.apps.googleusercontent.com"
+
 #endif /* AAConstants_h */
