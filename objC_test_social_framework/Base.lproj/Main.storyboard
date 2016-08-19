@@ -36,13 +36,17 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="KeP-Pv-b0b"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" momentary="YES" id="WeH-ti-fvt">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <rect key="frame" x="121" y="7" width="359" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Act"/>
                                 <segment title="FB"/>
                                 <segment title="TW"/>
                                 <segment title="Insta"/>
+                                <segment title="VK"/>
+                                <segment title="OK"/>
+                                <segment title="G+"/>
+                                <segment title="LIn"/>
                             </segments>
                             <connections>
                                 <action selector="onSelectNetwork:" destination="BYZ-38-t0r" eventType="valueChanged" id="zQQ-3H-EHq"/>
@@ -156,10 +160,16 @@
                                     <constraint firstItem="xfD-3X-zuS" firstAttribute="top" secondItem="rKb-eG-zPE" secondAttribute="bottom" constant="8" id="sBN-r4-WuG"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-H2-gda">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="816-Up-f2U" firstAttribute="leading" secondItem="5mM-36-4ff" secondAttribute="leading" constant="20" id="15Z-iR-dSR"/>
+                            <constraint firstItem="hBn-H2-gda" firstAttribute="centerY" secondItem="5mM-36-4ff" secondAttribute="centerY" id="3sT-cF-fdl"/>
+                            <constraint firstItem="hBn-H2-gda" firstAttribute="centerX" secondItem="5mM-36-4ff" secondAttribute="centerX" id="7sV-tY-wfH"/>
                             <constraint firstItem="FcS-hX-bwQ" firstAttribute="top" secondItem="816-Up-f2U" secondAttribute="bottom" constant="20" id="Zqs-gl-NcO"/>
                             <constraint firstAttribute="trailing" secondItem="816-Up-f2U" secondAttribute="trailing" constant="20" id="fXx-HS-F9Z"/>
                             <constraint firstItem="816-Up-f2U" firstAttribute="top" secondItem="SVe-ZY-DRn" secondAttribute="bottom" constant="20" id="xBE-k3-RWn"/>
@@ -174,6 +184,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activity" destination="hBn-H2-gda" id="fYW-FI-iRt"/>
                         <outlet property="bio" destination="wiv-Di-Q7n" id="PI0-io-IEl"/>
                         <outlet property="detailedInfo" destination="BHv-FQ-73M" id="oVM-Hs-fIF"/>
                         <outlet property="detailsContainer" destination="816-Up-f2U" id="Qdp-3p-YVC"/>
@@ -189,6 +200,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSj-Ol-NTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="1089"/>
+        </scene>
+        <!--Vkontakte-->
+        <scene sceneID="cXM-GO-woL">
+            <objects>
+                <viewController storyboardIdentifier="AAVkontakteViewController" id="lpA-wm-DeX" customClass="AAVkontakteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WaA-pI-QgR"/>
+                        <viewControllerLayoutGuide type="bottom" id="1d2-TH-YZO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hym-GL-E1H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD8-BD-Tvl">
+                                <rect key="frame" x="20" y="84" width="560" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1d2-TH-YZO" firstAttribute="top" secondItem="GD8-BD-Tvl" secondAttribute="bottom" constant="20" id="LUz-Co-wmf"/>
+                            <constraint firstAttribute="trailing" secondItem="GD8-BD-Tvl" secondAttribute="trailing" constant="20" id="UVk-0d-qLU"/>
+                            <constraint firstItem="GD8-BD-Tvl" firstAttribute="top" secondItem="WaA-pI-QgR" secondAttribute="bottom" constant="20" id="dxK-9p-fqD"/>
+                            <constraint firstItem="GD8-BD-Tvl" firstAttribute="leading" secondItem="Hym-GL-E1H" secondAttribute="leading" constant="20" id="zcJ-AM-0N3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vkontakte" id="qw3-7z-JPp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="HQO-Yy-n6a"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="Hcw-jF-jKq">
+                            <connections>
+                                <action selector="onShareItPressed:" destination="lpA-wm-DeX" id="D71-cT-OHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2DA-Bw-gTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="1897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ndv-nr-vTO">
@@ -225,6 +274,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feM-HI-TEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440" y="1089"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aZg-vC-RFJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ATw-NT-HNJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wHY-UB-abN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lpA-wm-DeX" kind="relationship" relationship="rootViewController" id="fZa-Ea-138"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUF-Ng-YiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440" y="1897"/>
         </scene>
     </scenes>
 </document>

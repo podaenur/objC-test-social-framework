@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 extern NSString *const UIStoryboardAAInstagramViewControllerIdentifier;
+extern NSString *const UIStoryboardAAVkontakteViewControllerIdentifier;
+
+//extern NSString *const UIStoryboard<#name#>Identifier;
 
 @interface UIStoryboard (AAHelper)
 

@@ -23,6 +23,10 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
     AANetworkTypeFacebook = 1,
     AANetworkTypeTwitter = 2,
     AANetworkTypeInstagram = 3,
+    AANetworkTypeVkontakte = 4,
+    AANetworkTypeOdnoklassniki = 5,
+    AANetworkTypeGooglePlus = 6,
+    AANetworkTypeLinkedIn = 7,
 };
 
 @interface AAViewController ()
@@ -142,6 +146,22 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
     [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAAInstagramViewControllerIdentifier]];
 }
 
+- (void)vkontakteSharing {
+    [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAAVkontakteViewControllerIdentifier]];
+}
+
+- (void)odnoklassnikiSharing {
+    //  void
+}
+
+- (void)googlePlusSharing {
+    //  void
+}
+
+- (void)linkedInSharing {
+    //  void
+}
+
 #pragma mark - Actions
 
 - (void)onCancel:(id)sender {
@@ -162,7 +182,18 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
         case AANetworkTypeInstagram:
             [self instagramSharing];
             break;
-            
+        case AANetworkTypeVkontakte:
+            [self vkontakteSharing];
+            break;
+        case AANetworkTypeOdnoklassniki:
+            [self odnoklassnikiSharing];
+            break;
+        case AANetworkTypeGooglePlus:
+            [self googlePlusSharing];
+            break;
+        case AANetworkTypeLinkedIn:
+            [self linkedInSharing];
+            break;
         default:
             break;
     }

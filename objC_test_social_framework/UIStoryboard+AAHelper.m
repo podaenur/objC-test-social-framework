@@ -9,6 +9,9 @@
 #import "UIStoryboard+AAHelper.h"
 
 NSString *const UIStoryboardAAInstagramViewControllerIdentifier = @"AAInstagramViewController";
+NSString *const UIStoryboardAAVkontakteViewControllerIdentifier = @"AAVkontakteViewController";
+//NSString *const UIStoryboard<#name#>Identifier = @"<#name#>";
+
 NSString *const kUIStoryboardMainName = @"Main";
 
 @implementation UIStoryboard (AAHelper)

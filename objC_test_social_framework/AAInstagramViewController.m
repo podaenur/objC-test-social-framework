@@ -6,7 +6,8 @@
 //  Copyright © 2016 E-legion. All rights reserved.
 //
 
-#import <InstagramKit.h>
+@import InstagramKit;
+
 #import "AAInstagramViewController.h"
 #import "AASharingData.h"
 #import "AAConstants.h"
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) UIViewController *webViewController;
 @property (nonatomic, strong) UIWebView *authorizationView;
 @property (nonatomic, strong) InstagramUser *user;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 //  info view
 @property (weak, nonatomic) IBOutlet UIView *detailsContainer;
@@ -110,6 +113,8 @@
 //                             };
     
 //  http://stackoverflow.com/questions/11393071/how-to-share-an-image-on-instagram-in-ios
+
+    //  TODO: прологировать через прокси запросы, посылаемые инстой
 }
 
 #pragma mark - Public
@@ -153,6 +158,24 @@
         [self fetchUserData];
     }
     return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    if (!self.activity.isAnimating) {
+        [self.activity startAnimating];
+    }
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    if (self.activity.isAnimating) {
+        [self.activity stopAnimating];
+    }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
+    if (self.activity.isAnimating) {
+        [self.activity stopAnimating];
+    }
 }
 
 #pragma mark - Notifications handlers

@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D0830D15BBF90CCD0247F1C /* libPods-objC_test_social_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */; };
+		249A7596624B24778AC1FEC5 /* Pods_objC_test_social_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
 		909E1BF41D58B55F0097F0C2 /* UIStoryboard+AAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BF31D58B55F0097F0C2 /* UIStoryboard+AAHelper.m */; };
 		909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BF81D58C9140097F0C2 /* AASharingData.m */; };
+		909E1BFC1D59E0A10097F0C2 /* AAVkontakteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BFB1D59E0A10097F0C2 /* AAVkontakteViewController.m */; };
 		90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F191D53802E00A33C35 /* AAApplication.m */; };
 		90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */; };
 		90C5F4AD1D53571C00997717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C5F4AC1D53571C00997717 /* main.m */; };
@@ -36,6 +37,8 @@
 		909E1BF31D58B55F0097F0C2 /* UIStoryboard+AAHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+AAHelper.m"; sourceTree = "<group>"; };
 		909E1BF71D58C9140097F0C2 /* AASharingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASharingData.h; sourceTree = "<group>"; };
 		909E1BF81D58C9140097F0C2 /* AASharingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASharingData.m; sourceTree = "<group>"; };
+		909E1BFA1D59E0A10097F0C2 /* AAVkontakteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAVkontakteViewController.h; sourceTree = "<group>"; };
+		909E1BFB1D59E0A10097F0C2 /* AAVkontakteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAVkontakteViewController.m; sourceTree = "<group>"; };
 		90B32F181D53802E00A33C35 /* AAApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAApplication.h; sourceTree = "<group>"; };
 		90B32F191D53802E00A33C35 /* AAApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAApplication.m; sourceTree = "<group>"; };
 		90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAComposeViewController.h; sourceTree = "<group>"; };
@@ -51,7 +54,7 @@
 		90C5F4BA1D53571C00997717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C5F4BC1D53571C00997717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C5F4C21D53572F00997717 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objC_test_social_framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_objC_test_social_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C5F4C31D53572F00997717 /* Social.framework in Frameworks */,
-				3D0830D15BBF90CCD0247F1C /* libPods-objC_test_social_framework.a in Frameworks */,
+				249A7596624B24778AC1FEC5 /* Pods_objC_test_social_framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +74,7 @@
 		1462A7C43AA569CB570EE3B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F18C13BB4FDF53C99D22347 /* libPods-objC_test_social_framework.a */,
+				BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,15 +91,17 @@
 		909E1BEC1D58B3530097F0C2 /* _ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				90C5F4B11D53571C00997717 /* AAViewController.h */,
-				90C5F4B21D53571C00997717 /* AAViewController.m */,
-				909E1BE91D58B33A0097F0C2 /* AAInstagramViewController.h */,
-				909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */,
+				909E1BED1D58B3660097F0C2 /* _Xibs */,
 				90B32F1B1D5385B500A33C35 /* AAComposeViewController.h */,
 				90B32F1C1D5385B500A33C35 /* AAComposeViewController.m */,
 				907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */,
 				907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */,
-				909E1BED1D58B3660097F0C2 /* _Xibs */,
+				909E1BE91D58B33A0097F0C2 /* AAInstagramViewController.h */,
+				909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */,
+				90C5F4B11D53571C00997717 /* AAViewController.h */,
+				90C5F4B21D53571C00997717 /* AAViewController.m */,
+				909E1BFA1D59E0A10097F0C2 /* AAVkontakteViewController.h */,
+				909E1BFB1D59E0A10097F0C2 /* AAVkontakteViewController.m */,
 			);
 			name = _ViewControllers;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */,
 				90C5F4B31D53571C00997717 /* AAViewController.m in Sources */,
 				90C5F4B01D53571C00997717 /* AppDelegate.m in Sources */,
+				909E1BFC1D59E0A10097F0C2 /* AAVkontakteViewController.m in Sources */,
 				90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */,
 				907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */,
 				909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */,
