@@ -1,6 +1,0 @@
-framework module Pods_objC_test_social_framework {
-  umbrella header "Pods-objC_test_social_framework-umbrella.h"
-
-  export *
-  module * { export * }
-}
