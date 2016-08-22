@@ -23,6 +23,7 @@
 		90C5F4B81D53571C00997717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C5F4B71D53571C00997717 /* Assets.xcassets */; };
 		90C5F4BB1D53571C00997717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C5F4B91D53571C00997717 /* LaunchScreen.storyboard */; };
 		90C5F4C31D53572F00997717 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C5F4C21D53572F00997717 /* Social.framework */; };
+		CF7A6C391D6B1C40003D6082 /* AAOdnoklassnikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		90C5F4BC1D53571C00997717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C5F4C21D53572F00997717 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_objC_test_social_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7A6C371D6B1C40003D6082 /* AAOdnoklassnikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAOdnoklassnikiViewController.h; sourceTree = "<group>"; };
+		CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAOdnoklassnikiViewController.m; sourceTree = "<group>"; };
 		DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,8 @@
 				90C5F4B21D53571C00997717 /* AAViewController.m */,
 				909E1BFA1D59E0A10097F0C2 /* AAVkontakteViewController.h */,
 				909E1BFB1D59E0A10097F0C2 /* AAVkontakteViewController.m */,
+				CF7A6C371D6B1C40003D6082 /* AAOdnoklassnikiViewController.h */,
+				CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */,
 			);
 			name = _ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */,
 				909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */,
 				90C5F4B31D53571C00997717 /* AAViewController.m in Sources */,
+				CF7A6C391D6B1C40003D6082 /* AAOdnoklassnikiViewController.m in Sources */,
 				90C5F4B01D53571C00997717 /* AppDelegate.m in Sources */,
 				909E1BFC1D59E0A10097F0C2 /* AAVkontakteViewController.m in Sources */,
 				90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */,
