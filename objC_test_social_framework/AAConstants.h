@@ -16,4 +16,8 @@
 #define VK_APP_ID @"5580549"
 #define VK_SECRET_KEY @"zhKnx2ATDgHcTiTQYwWF"
 
+#define OK_APP_ID @"1247962112"
+#define OK_PUBLIC_KEY @"CBAFGDGLEBABABABA"
+#define OK_SECRET_KEY @"02A599608FB5D9BE868DB11C"
+
 #endif /* AAConstants_h */
