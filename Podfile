@@ -5,4 +5,5 @@ use_frameworks!
 #  pod 'mopub-ios-sdk'
   pod 'InstagramKit'
   pod 'VK-ios-sdk'
+  pod 'ok-ios-sdk', '~> 2.0.11'
 end
