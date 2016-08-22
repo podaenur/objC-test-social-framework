@@ -43,16 +43,34 @@
 #pragma mark - Google Authentication
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
-    return [[GIDSignIn sharedInstance] handleURL:url
+    if ([LISDKCallbackHandler shouldHandleUrl:url]) {
+        // Handle LinkedIn
+        return [LISDKCallbackHandler application:app
+                                         openURL:url
                                sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
                                       annotation:options[UIApplicationLaunchOptionsAnnotationKey]];
+    } else {
+        // Handle Google
+        return [[GIDSignIn sharedInstance] handleURL:url
+                                   sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                          annotation:options[UIApplicationLaunchOptionsAnnotationKey]];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     // Deprecated method for iOS 8 and older
-    return [[GIDSignIn sharedInstance] handleURL:url
+    if ([LISDKCallbackHandler shouldHandleUrl:url]) {
+        // Handle LinkedIn
+        return [LISDKCallbackHandler application:application
+                                         openURL:url
                                sourceApplication:sourceApplication
                                       annotation:annotation];
+    } else {
+        // Handle Google
+        return [[GIDSignIn sharedInstance] handleURL:url
+                                   sourceApplication:sourceApplication
+                                          annotation:annotation];
+    }
 }
 
 @end
