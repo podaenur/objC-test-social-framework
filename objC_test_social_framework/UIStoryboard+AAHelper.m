@@ -10,6 +10,7 @@
 
 NSString *const UIStoryboardAAInstagramViewControllerIdentifier = @"AAInstagramViewController";
 NSString *const UIStoryboardAAVkontakteViewControllerIdentifier = @"AAVkontakteViewController";
+NSString *const UIStoryboardAAOdnoklassnikiViewControllerIdentifier = @"AAOdnoklassnikiViewController";
 //NSString *const UIStoryboard<#name#>Identifier = @"<#name#>";
 
 NSString *const kUIStoryboardMainName = @"Main";

@@ -151,7 +151,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 }
 
 - (void)odnoklassnikiSharing {
-    //  void
+    [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAAOdnoklassnikiViewControllerIdentifier]];
 }
 
 - (void)googlePlusSharing {
