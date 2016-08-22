@@ -6,6 +6,7 @@
 //  Copyright © 2016 E-legion. All rights reserved.
 //
 
+#import <ok_ios_sdk/OKSDK.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -18,6 +19,11 @@
     
     NSLog(@"Started %@", NSStringFromClass([application class]));
     
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [OKSDK openUrl:url];
     return YES;
 }
 
