@@ -11,6 +11,8 @@
 extern NSString *const UIStoryboardAAInstagramViewControllerIdentifier;
 extern NSString *const UIStoryboardAAVkontakteViewControllerIdentifier;
 extern NSString *const UIStoryboardAAOdnoklassnikiViewControllerIdentifier;
+extern NSString *const UIStoryboardAAGoogleViewControllerIdentifier;
+
 //extern NSString *const UIStoryboard<#name#>Identifier;
 
 @interface UIStoryboard (AAHelper)

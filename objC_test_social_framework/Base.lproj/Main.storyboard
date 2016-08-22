@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="brW-dE-A7E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="brW-dE-A7E">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -238,6 +238,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DA-Bw-gTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="1897"/>
+        </scene>
+        <!--Google View Controller-->
+        <scene sceneID="yA3-DJ-T7t">
+            <objects>
+                <viewController storyboardIdentifier="AAGoogleViewController" id="9Lq-kI-kya" customClass="AAGoogleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wua-GB-iNs"/>
+                        <viewControllerLayoutGuide type="bottom" id="sL4-EX-tWk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3l-SM-dIM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-Ed-ZcP" customClass="GIDSignInButton">
+                                <rect key="frame" x="185" y="91" width="230" height="48"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="KRY-Px-vM7"/>
+                                    <constraint firstAttribute="width" constant="230" id="zEl-qv-Nek"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-OO-9e8">
+                                <rect key="frame" x="185" y="166" width="230" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="obU-VA-HMx"/>
+                                    <constraint firstAttribute="width" constant="230" id="wXT-zp-PVh"/>
+                                </constraints>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="9Lq-kI-kya" eventType="touchUpInside" id="CYb-qT-GIj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSq-MF-hGs">
+                                <rect key="frame" x="185" y="242" width="230" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="154-3m-ogJ"/>
+                                    <constraint firstAttribute="height" constant="48" id="EmJ-8b-oA7"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapShare:" destination="9Lq-kI-kya" eventType="touchUpInside" id="1O4-BW-h17"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-NL-B6S">
+                                <rect key="frame" x="277" y="314" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapDrive:" destination="9Lq-kI-kya" eventType="touchUpInside" id="VY5-fY-CrL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rBU-Ed-ZcP" firstAttribute="top" secondItem="wua-GB-iNs" secondAttribute="bottom" constant="27" id="2TX-bn-lag"/>
+                            <constraint firstItem="Tyd-OO-9e8" firstAttribute="top" secondItem="rBU-Ed-ZcP" secondAttribute="bottom" constant="27" id="CKK-eD-5U1"/>
+                            <constraint firstItem="rBU-Ed-ZcP" firstAttribute="centerX" secondItem="v3l-SM-dIM" secondAttribute="centerX" id="RWy-9q-mYj"/>
+                            <constraint firstItem="Tyd-OO-9e8" firstAttribute="centerX" secondItem="v3l-SM-dIM" secondAttribute="centerX" id="h6i-jo-PIo"/>
+                            <constraint firstItem="BSq-MF-hGs" firstAttribute="top" secondItem="Tyd-OO-9e8" secondAttribute="bottom" constant="28" id="ie9-Op-MJi"/>
+                            <constraint firstItem="BSq-MF-hGs" firstAttribute="centerX" secondItem="v3l-SM-dIM" secondAttribute="centerX" id="rGz-Bf-sze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A3w-uX-9U8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QO9-jd-Exo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="2678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ndv-nr-vTO">

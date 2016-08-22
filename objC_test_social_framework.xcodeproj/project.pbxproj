@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		249A7596624B24778AC1FEC5 /* Pods_objC_test_social_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */; };
 		5D1B24711D674E860041F4EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B24701D674E860041F4EC /* GoogleService-Info.plist */; };
+		5D1B24741D6750350041F4EC /* AAGoogleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24731D6750350041F4EC /* AAGoogleViewController.m */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		5D1B24701D674E860041F4EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D1B24721D6750350041F4EC /* AAGoogleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAGoogleViewController.h; path = Code/AAGoogleViewController.h; sourceTree = "<group>"; };
+		5D1B24731D6750350041F4EC /* AAGoogleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAGoogleViewController.m; path = Code/AAGoogleViewController.m; sourceTree = "<group>"; };
 		71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.release.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.release.xcconfig"; sourceTree = "<group>"; };
 		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
 		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				909E1BFB1D59E0A10097F0C2 /* AAVkontakteViewController.m */,
 				CF7A6C371D6B1C40003D6082 /* AAOdnoklassnikiViewController.h */,
 				CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */,
+				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
+				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
 			);
 			name = _ViewControllers;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				909E1BEC1D58B3530097F0C2 /* _ViewControllers */,
 				90C5F4B71D53571C00997717 /* Assets.xcassets */,
 				90C5F4BC1D53571C00997717 /* Info.plist */,
+				5D1B24701D674E860041F4EC /* GoogleService-Info.plist */,
 				90C5F4AB1D53571C00997717 /* Supporting Files */,
 			);
 			path = objC_test_social_framework;
@@ -205,7 +211,6 @@
 		90C5F4AB1D53571C00997717 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D1B24701D674E860041F4EC /* GoogleService-Info.plist */,
 				90C5F4AC1D53571C00997717 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -335,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1B24741D6750350041F4EC /* AAGoogleViewController.m in Sources */,
 				90B32F1A1D53802E00A33C35 /* AAApplication.m in Sources */,
 				909E1BF91D58C9140097F0C2 /* AASharingData.m in Sources */,
 				90C5F4B31D53571C00997717 /* AAViewController.m in Sources */,

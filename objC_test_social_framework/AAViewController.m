@@ -155,7 +155,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 }
 
 - (void)googlePlusSharing {
-    //  void
+    [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAAGoogleViewControllerIdentifier]];
 }
 
 - (void)linkedInSharing {
