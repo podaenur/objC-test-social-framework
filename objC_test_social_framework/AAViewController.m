@@ -159,7 +159,7 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 }
 
 - (void)linkedInSharing {
-    //  void
+    [self __pushViewController:[UIStoryboard controllerWithIdentifier:UIStoryboardAALinkedInViewControllerIdentifier]];
 }
 
 #pragma mark - Actions
