@@ -8,7 +8,9 @@
 
 #import <ok_ios_sdk/OKSDK.h>
 #import "AppDelegate.h"
+
 #import <Google/SignIn.h>
+#import <linkedin-sdk/LISDK.h>
 
 @interface AppDelegate ()
 

@@ -11,6 +11,7 @@
 		5D1B24711D674E860041F4EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B24701D674E860041F4EC /* GoogleService-Info.plist */; };
 		5D1B24741D6750350041F4EC /* AAGoogleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24731D6750350041F4EC /* AAGoogleViewController.m */; };
 		5D1B24771D6B04D50041F4EC /* AALinkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */; };
+		5D1B247A1D6B1B8B0041F4EC /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
@@ -35,6 +36,7 @@
 		5D1B24731D6750350041F4EC /* AAGoogleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAGoogleViewController.m; path = Code/AAGoogleViewController.m; sourceTree = "<group>"; };
 		5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AALinkedInViewController.h; path = Code/AALinkedInViewController.h; sourceTree = "<group>"; };
 		5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AALinkedInViewController.m; path = Code/AALinkedInViewController.m; sourceTree = "<group>"; };
+		5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.release.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.release.xcconfig"; sourceTree = "<group>"; };
 		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
 		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1B247A1D6B1B8B0041F4EC /* linkedin-sdk.framework in Frameworks */,
 				90C5F4C31D53572F00997717 /* Social.framework in Frameworks */,
 				249A7596624B24778AC1FEC5 /* Pods_objC_test_social_framework.framework in Frameworks */,
 			);
@@ -88,6 +91,15 @@
 				BF66D9F0EC9367F3E9229CE9 /* Pods_objC_test_social_framework.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D1B24781D6B1B7A0041F4EC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */,
+			);
+			name = Vendor;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		85199B173D3F0DA516E0F486 /* Pods */ = {
@@ -209,6 +221,7 @@
 				90C5F4BC1D53571C00997717 /* Info.plist */,
 				5D1B24701D674E860041F4EC /* GoogleService-Info.plist */,
 				90C5F4AB1D53571C00997717 /* Supporting Files */,
+				5D1B24781D6B1B7A0041F4EC /* Vendor */,
 			);
 			path = objC_test_social_framework;
 			sourceTree = "<group>";
@@ -473,6 +486,10 @@
 			baseConfigurationReference = DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = objC_test_social_framework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,6 +503,10 @@
 			baseConfigurationReference = 71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = objC_test_social_framework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

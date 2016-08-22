@@ -8,6 +8,8 @@
 
 #import "AALinkedInViewController.h"
 
+#import <linkedin-sdk/LISDK.h>
+
 @interface AALinkedInViewController ()
 
 @end
