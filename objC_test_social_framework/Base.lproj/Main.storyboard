@@ -320,7 +320,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Odnoklassniki" id="862-LK-RRA">
                         <barButtonItem key="backBarButtonItem" title=" " id="CCe-u6-jca"/>
-                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="zHw-Xs-UXq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="zHw-Xs-UXq">
+                            <connections>
+                                <action selector="shareItAction:" destination="Xqz-Kf-LkH" id="8FV-Z5-FMo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grn-md-FPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
