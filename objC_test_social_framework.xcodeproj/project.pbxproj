@@ -12,6 +12,7 @@
 		5D1B24741D6750350041F4EC /* AAGoogleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24731D6750350041F4EC /* AAGoogleViewController.m */; };
 		5D1B24771D6B04D50041F4EC /* AALinkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */; };
 		5D1B247A1D6B1B8B0041F4EC /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */; };
+		5D1B247D1D6C76920041F4EC /* AALinkedInWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
@@ -37,6 +38,8 @@
 		5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AALinkedInViewController.h; path = Code/AALinkedInViewController.h; sourceTree = "<group>"; };
 		5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AALinkedInViewController.m; path = Code/AALinkedInViewController.m; sourceTree = "<group>"; };
 		5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
+		5D1B247B1D6C76920041F4EC /* AALinkedInWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AALinkedInWebViewController.h; path = Code/AALinkedInWebViewController.h; sourceTree = "<group>"; };
+		5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AALinkedInWebViewController.m; path = Code/AALinkedInWebViewController.m; sourceTree = "<group>"; };
 		71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objC_test_social_framework.release.xcconfig"; path = "Pods/Target Support Files/Pods-objC_test_social_framework/Pods-objC_test_social_framework.release.xcconfig"; sourceTree = "<group>"; };
 		907AC67B1D54C2F000137CBE /* AAImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAImageSelectionViewController.h; sourceTree = "<group>"; };
 		907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAImageSelectionViewController.m; sourceTree = "<group>"; };
@@ -102,6 +105,17 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		5D1B247E1D6C76960041F4EC /* LinkedIn */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */,
+				5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */,
+				5D1B247B1D6C76920041F4EC /* AALinkedInWebViewController.h */,
+				5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */,
+			);
+			name = LinkedIn;
+			sourceTree = "<group>";
+		};
 		85199B173D3F0DA516E0F486 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +143,7 @@
 				CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */,
 				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
 				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
-				5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */,
-				5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */,
+				5D1B247E1D6C76960041F4EC /* LinkedIn */,
 			);
 			name = _ViewControllers;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 				909E1BFC1D59E0A10097F0C2 /* AAVkontakteViewController.m in Sources */,
 				90B32F1D1D5385B500A33C35 /* AAComposeViewController.m in Sources */,
 				907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */,
+				5D1B247D1D6C76920041F4EC /* AALinkedInWebViewController.m in Sources */,
 				909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */,
 				909E1BF41D58B55F0097F0C2 /* UIStoryboard+AAHelper.m in Sources */,
 				90C5F4AD1D53571C00997717 /* main.m in Sources */,
