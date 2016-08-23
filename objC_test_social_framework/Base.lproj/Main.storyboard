@@ -293,5 +293,61 @@
             </objects>
             <point key="canvasLocation" x="1440" y="1897"/>
         </scene>
+        <!--Odnoklassniki-->
+        <scene sceneID="nQ5-hB-Hbk">
+            <objects>
+                <viewController storyboardIdentifier="AAOdnoklassnikiViewController" id="Xqz-Kf-LkH" userLabel="Odnoklassniki" customClass="AAOdnoklassnikiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ksA-Tg-Ezr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rfy-Ia-fIR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cri-UX-Bpi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-Oc-CeN">
+                                <rect key="frame" x="20" y="84" width="560" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IVk-Oc-CeN" secondAttribute="trailing" constant="20" id="2GM-V4-vSq"/>
+                            <constraint firstItem="IVk-Oc-CeN" firstAttribute="top" secondItem="ksA-Tg-Ezr" secondAttribute="bottom" constant="20" id="Lo8-BC-kaU"/>
+                            <constraint firstItem="Rfy-Ia-fIR" firstAttribute="top" secondItem="IVk-Oc-CeN" secondAttribute="bottom" constant="20" id="dAH-2I-sN2"/>
+                            <constraint firstItem="IVk-Oc-CeN" firstAttribute="leading" secondItem="cri-UX-Bpi" secondAttribute="leading" constant="20" id="yXs-SY-njU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Odnoklassniki" id="862-LK-RRA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CCe-u6-jca"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="zHw-Xs-UXq">
+                            <connections>
+                                <action selector="shareItAction:" destination="Xqz-Kf-LkH" id="8FV-Z5-FMo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grn-md-FPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="2596"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UtI-oY-eFB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqV-rz-8HB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bJg-nK-GYK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xqz-Kf-LkH" kind="relationship" relationship="rootViewController" id="bgQ-43-Roc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEr-18-vjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440" y="2596"/>
+        </scene>
     </scenes>
 </document>
