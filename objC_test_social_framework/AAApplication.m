@@ -11,7 +11,6 @@
 @implementation AAApplication
 
 - (BOOL)openURL:(NSURL*)url {
-    
     NSLog(@"openURL: %@", url.absoluteString);
     
     return [super openURL:url];

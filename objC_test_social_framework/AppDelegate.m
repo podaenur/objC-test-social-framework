@@ -43,6 +43,7 @@
 #pragma mark - Google Authentication
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    
     if ([LISDKCallbackHandler shouldHandleUrl:url]) {
         // Handle LinkedIn
         return [LISDKCallbackHandler application:app

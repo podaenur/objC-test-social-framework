@@ -74,7 +74,6 @@
     [[GIDSignIn sharedInstance] signIn];
 }
 
-
 #pragma mark - GIDSignIn delegate
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {

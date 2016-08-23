@@ -270,6 +270,7 @@
 				TargetAttributes = {
 					90C5F4A71D53571C00997717 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7YR7SK2Q66;
 					};
 				};
 			};
@@ -486,6 +487,7 @@
 			baseConfigurationReference = DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuri Petukhov (ABR5V73TGH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -503,6 +505,7 @@
 			baseConfigurationReference = 71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuri Petukhov (ABR5V73TGH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

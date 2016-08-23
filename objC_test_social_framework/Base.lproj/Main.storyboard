@@ -285,13 +285,6 @@
                                     <action selector="didTapShare:" destination="9Lq-kI-kya" eventType="touchUpInside" id="1O4-BW-h17"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-NL-B6S">
-                                <rect key="frame" x="277" y="314" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didTapDrive:" destination="9Lq-kI-kya" eventType="touchUpInside" id="VY5-fY-CrL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -320,9 +313,54 @@
                     <view key="view" contentMode="scaleToFill" id="APS-o7-eXe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWZ-bF-3qy">
+                                <rect key="frame" x="181" y="69" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="PLU-mP-4bA"/>
+                                    <constraint firstAttribute="height" constant="30" id="w52-uz-50O"/>
+                                </constraints>
+                                <state key="normal" title="Authenticate in LinkedIn">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAuthenticate:" destination="PKp-sa-G3p" eventType="touchUpInside" id="mOI-sT-RoJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-sf-t0g">
+                                <rect key="frame" x="181" y="107" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="58q-Zc-SON"/>
+                                    <constraint firstAttribute="width" constant="238" id="ctj-pa-2RG"/>
+                                </constraints>
+                                <state key="normal" title="Profile Info">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapProfileInfo:" destination="PKp-sa-G3p" eventType="touchUpInside" id="3On-gg-9qa"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd4-EN-lXj">
+                                <rect key="frame" x="0.0" y="154" width="600" height="446"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qd4-EN-lXj" firstAttribute="leading" secondItem="APS-o7-eXe" secondAttribute="leading" id="0Iw-U9-khW"/>
+                            <constraint firstItem="qd4-EN-lXj" firstAttribute="top" secondItem="cNr-sf-t0g" secondAttribute="bottom" constant="17" id="4Zc-d9-f6u"/>
+                            <constraint firstItem="cNr-sf-t0g" firstAttribute="centerX" secondItem="APS-o7-eXe" secondAttribute="centerX" id="TM1-eQ-hQ1"/>
+                            <constraint firstAttribute="trailing" secondItem="qd4-EN-lXj" secondAttribute="trailing" id="iCv-W7-Ke8"/>
+                            <constraint firstItem="l0p-Eu-cHn" firstAttribute="top" secondItem="qd4-EN-lXj" secondAttribute="bottom" id="k8C-t7-brX"/>
+                            <constraint firstItem="zWZ-bF-3qy" firstAttribute="top" secondItem="kUN-q9-BuJ" secondAttribute="bottom" constant="5" id="kp1-Mz-dy7"/>
+                            <constraint firstItem="zWZ-bF-3qy" firstAttribute="centerX" secondItem="APS-o7-eXe" secondAttribute="centerX" id="mwK-Ws-ipw"/>
+                            <constraint firstItem="cNr-sf-t0g" firstAttribute="top" secondItem="zWZ-bF-3qy" secondAttribute="bottom" constant="8" id="oN7-Wz-XX1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="my8-n2-RM6"/>
+                    <connections>
+                        <outlet property="webView" destination="qd4-EN-lXj" id="BhG-Y3-mm3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwr-SW-YRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
