@@ -29,23 +29,26 @@
     [sdk registerDelegate:self];
     sdk.uiDelegate = self;
     
-    NSArray *scope = @[ @"notify",
-                        @"friends",
-                        @"photos",
-                        @"audio",
-                        @"video",
-                        @"docs",
-                        @"notes",
-                        @"pages",
-                        @"status",
-                        @"offers",
-                        @"questions",
-                        @"wall",
-                        @"groups",
-                        @"messages",
-                        @"email",
-                        @"notifications",
-                        @"stats" ];
+//    NSArray *scope = @[ @"notify",
+//                        @"friends",
+//                        @"photos",
+//                        @"audio",
+//                        @"video",
+//                        @"docs",
+//                        @"notes",
+//                        @"pages",
+//                        @"status",
+//                        @"offers",
+//                        @"questions",
+//                        @"wall",
+//                        @"groups",
+//                        @"messages",
+//                        @"email",
+//                        @"notifications",
+//                        @"stats" ];
+  
+  NSArray *scope = @[ @"nickname", @"screen_name", @"sex", @"bdate (birthdate)", @"city", @"country", @"timezone", @"photo", @"photo_medium", @"photo_big", @"has_mobile", @"contacts", @"education", @"online", @"counters", @"relation", @"last_seen", @"activity", @"can_write_private_message", @"can_see_all_posts", @"can_post", @"universities"];
+  
     [VKSdk wakeUpSession:scope completeBlock:^(VKAuthorizationState state, NSError *error) {
         if (error) {
             NSLog(@"%@", [error description]);
