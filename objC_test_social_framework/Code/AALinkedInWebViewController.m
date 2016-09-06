@@ -39,7 +39,7 @@ static NSString * const kAALinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
     NSString *redirectURL = @"https://com.e-legion.linkedin.oauth/oauth";
     // State = random string
     NSString *state = @"asdfjsiofweiuhfuyuya11532DFSDASDASFADSFDS";
-    NSString *scope = @"r_basicprofile+r_emailaddress+w_share"; // Get acces to profile, e-mail and sharing
+    NSString *scope = @"r_fullprofile+r_emailaddress+w_share"; // Get acces to profile, e-mail and sharing
     
     NSString *fullURL = [NSString stringWithFormat:@"%@?response_type=%@&client_id=%@&redirect_uri=%@&state=%@&scope=%@", kAALinkedInAuthorizationEndPoint, responseType, kAALinkedInKey, redirectURL, state, scope];
     
