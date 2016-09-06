@@ -296,7 +296,13 @@
                             <constraint firstItem="BSq-MF-hGs" firstAttribute="centerX" secondItem="v3l-SM-dIM" secondAttribute="centerX" id="rGz-Bf-sze"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="A3w-uX-9U8"/>
+                    <navigationItem key="navigationItem" id="A3w-uX-9U8">
+                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="yR1-AX-oui">
+                            <connections>
+                                <action selector="didTapShare:" destination="9Lq-kI-kya" id="IzQ-ib-qPq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QO9-jd-Exo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,7 +355,13 @@
                             <constraint firstItem="cNr-sf-t0g" firstAttribute="top" secondItem="zWZ-bF-3qy" secondAttribute="bottom" constant="8" id="oN7-Wz-XX1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="my8-n2-RM6"/>
+                    <navigationItem key="navigationItem" id="my8-n2-RM6">
+                        <barButtonItem key="rightBarButtonItem" title="Share it!" id="NRt-c1-VQJ">
+                            <connections>
+                                <action selector="didTapShare:" destination="PKp-sa-G3p" id="p2Y-VE-3BA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="akP-5u-dco" kind="show" identifier="showWebView" id="hRV-Wv-arV"/>
                     </connections>

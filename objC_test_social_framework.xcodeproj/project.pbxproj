@@ -116,6 +116,15 @@
 			name = LinkedIn;
 			sourceTree = "<group>";
 		};
+		5D69E3651D7EBE5100AAFBA0 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
+				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
+			);
+			name = Google;
+			sourceTree = "<group>";
+		};
 		85199B173D3F0DA516E0F486 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +152,7 @@
 				CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */,
 				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
 				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
+				5D69E3651D7EBE5100AAFBA0 /* Google */,
 				5D1B247E1D6C76960041F4EC /* LinkedIn */,
 			);
 			name = _ViewControllers;

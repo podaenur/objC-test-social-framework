@@ -25,9 +25,6 @@
     
     [GIDSignIn sharedInstance].delegate = self;
     [GIDSignIn sharedInstance].uiDelegate = self;
-    
-    // Uncomment to automatically sign in the user.
-    //[[GIDSignIn sharedInstance] signInSilently];
 }
 
 #pragma mark - Google UIViewController
@@ -45,7 +42,10 @@
 - (IBAction)didTapSignOut:(UIButton *)sender {
     [[GIDSignIn sharedInstance] signOut];
 }
-- (IBAction)didTapShare:(UIButton *)sender {
+
+#pragma mark - Actions
+
+- (IBAction)didTapShare:(UIBarButtonItem *)sender {
     // Construct the Google+ share URL
     NSURLComponents* urlComponents = [[NSURLComponents alloc]
                                       initWithString:@"https://plus.google.com/share"];
@@ -64,14 +64,6 @@
         // Open the URL in the device's browser
         [[UIApplication sharedApplication] openURL:url];
     }
-}
-
-- (IBAction)didTapDrive:(UIButton *)sender {
-    NSString *driveScope = @"https://www.googleapis.com/auth/drive.readonly";
-    NSArray *currentScopes = [GIDSignIn sharedInstance].scopes;
-    [GIDSignIn sharedInstance].scopes = [currentScopes arrayByAddingObject:driveScope];
-    
-    [[GIDSignIn sharedInstance] signIn];
 }
 
 #pragma mark - GIDSignIn delegate

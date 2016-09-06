@@ -8,14 +8,14 @@
 
 #import "AALinkedInWebViewController.h"
 
-static NSString *const AAkLinkedInKey = @"77pyff9hua3e96";
-static NSString *const AAkLinkedInSecret = @"otW7P9JCn97H0wIV";
-static NSString *const AAkLinkedInAuthorizationEndPoint = @"https://www.linkedin.com/oauth/v2/authorization";
-static NSString *const AAkLinkedInAccessTokenEndPoint = @"https://www.linkedin.com/oauth/v2/accessToken";
-static NSString *const AAkLinkedInRedirectURL = @"https://com.e-legion.linkedin.oauth/oauth";
-static NSString *const AAkLinkedInOAuthHost = @"com.e-legion.linkedin.oauth";
-static NSString *const AAkLinkedInGrantType = @"authorization_code";
-static NSString *const AAkLinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
+static NSString * const kAALinkedInKey = @"77pyff9hua3e96";
+static NSString * const kAALinkedInSecret = @"otW7P9JCn97H0wIV";
+static NSString * const kAALinkedInAuthorizationEndPoint = @"https://www.linkedin.com/oauth/v2/authorization";
+static NSString * const kAALinkedInAccessTokenEndPoint = @"https://www.linkedin.com/oauth/v2/accessToken";
+static NSString * const kAALinkedInRedirectURL = @"https://com.e-legion.linkedin.oauth/oauth";
+static NSString * const kAALinkedInOAuthHost = @"com.e-legion.linkedin.oauth";
+static NSString * const kAALinkedInGrantType = @"authorization_code";
+static NSString * const kAALinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
 
 @interface AALinkedInWebViewController () <UIWebViewDelegate>
 
@@ -39,11 +39,11 @@ static NSString *const AAkLinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
     NSString *redirectURL = @"https://com.e-legion.linkedin.oauth/oauth";
     // State = random string
     NSString *state = @"asdfjsiofweiuhfuyuya11532DFSDASDASFADSFDS";
-    NSString *scope = @"r_basicprofile";
+    NSString *scope = @"r_basicprofile+r_emailaddress+w_share"; // Get acces to profile, e-mail and sharing
     
-    NSString *fullURL = [NSString stringWithFormat:@"%@?response_type=%@&client_id=%@&redirect_uri=%@&state=%@&scope=%@", AAkLinkedInAuthorizationEndPoint, responseType, AAkLinkedInKey, redirectURL, state, scope];
+    NSString *fullURL = [NSString stringWithFormat:@"%@?response_type=%@&client_id=%@&redirect_uri=%@&state=%@&scope=%@", kAALinkedInAuthorizationEndPoint, responseType, kAALinkedInKey, redirectURL, state, scope];
     
-    NSLog(@"AUTH STRING: %@", fullURL);
+    NSLog(@"Authorizations string: %@", fullURL);
     
     NSURL *url = [NSURL URLWithString:[fullURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -54,13 +54,13 @@ static NSString *const AAkLinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
-    if ([url.host isEqualToString:AAkLinkedInOAuthHost]) {
+    if ([url.host isEqualToString:kAALinkedInOAuthHost]) {
         if ([url.absoluteString rangeOfString:@"code"].location != NSNotFound) {
             NSArray *urlParts = [url.absoluteString componentsSeparatedByString:@"?"];
             NSArray *codeAndStateParts = [urlParts[1] componentsSeparatedByString:@"&"];
             NSString *code = [codeAndStateParts[0] componentsSeparatedByString:@"="][1];
             NSString *state = [codeAndStateParts[1] componentsSeparatedByString:@"="][1];
-            NSLog(@"AUTHORIZATION CODE: %@", code);
+            NSLog(@"Authorization code: %@", code);
             
             [self requestAccessToken:code];
         }
@@ -70,29 +70,15 @@ static NSString *const AAkLinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
 }
 
 - (void)requestAccessToken:(NSString *)authorizationCode {
-    NSArray *parametersArray = @[[@"grant_type=" stringByAppendingString:AAkLinkedInGrantType],
+    NSArray *parametersArray = @[[@"grant_type=" stringByAppendingString:kAALinkedInGrantType],
                                  [@"code=" stringByAppendingString:authorizationCode],
-                                 [@"redirect_uri=" stringByAppendingString:[AAkLinkedInRedirectURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]],
-                                 [@"client_id=" stringByAppendingString:AAkLinkedInKey],
-                                 [@"client_secret=" stringByAppendingString:AAkLinkedInSecret]];
+                                 [@"redirect_uri=" stringByAppendingString:[kAALinkedInRedirectURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]],
+                                 [@"client_id=" stringByAppendingString:kAALinkedInKey],
+                                 [@"client_secret=" stringByAppendingString:kAALinkedInSecret]];
     
     NSString *requestParameters = [parametersArray componentsJoinedByString:@"&"];
     NSData *postData = [requestParameters dataUsingEncoding:NSUTF8StringEncoding];
-    
-    //    NSDictionary *parametersDictionary = @{@"grant_type" : AAkLinkedInGrantType,
-    //                                 @"code" : authorizationCode,
-    //                                 @"redirect_uri" : [AAkLinkedInRedirectURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
-    //                                 @"client_id" : AAkLinkedInKey,
-    //                                 @"client_secret" : AAkLinkedInSecret};
-    //
-    //    NSData *postDataFromDictionary = [NSJSONSerialization dataWithJSONObject:parametersDictionary
-    //                                                                     options:0
-    //                                                                       error:nil];
-    //
-    //    NSLog(@"ARR: %@", postData);
-    //    NSLog(@"DIC: %@", postDataFromDictionary);
-    
-    NSURL *url = [NSURL URLWithString:AAkLinkedInAccessTokenEndPoint];
+    NSURL *url = [NSURL URLWithString:kAALinkedInAccessTokenEndPoint];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
@@ -110,13 +96,22 @@ static NSString *const AAkLinkedInTokenPath = @"LINKIDIN_ACCESS_TOKEN";
             NSString *accessToken = dataDictionary[@"access_token"];
             
             if (accessToken) {
-                NSLog(@"ACCESS TOKEN: %@", accessToken);
-                [[NSUserDefaults standardUserDefaults] setValue:accessToken forKey:AAkLinkedInTokenPath];
+                NSLog(@"Access token: %@", accessToken);
+                [self saveToken:accessToken];
+                
+                dispatch_async(dispatch_get_main_queue(), ^(){
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
             }
         }
     }];
     
     [task resume];
+}
+
+- (void)saveToken:(NSString *)token {
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kAALinkedInTokenPath];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
