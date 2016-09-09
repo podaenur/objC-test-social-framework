@@ -11,8 +11,8 @@
 		5D1B24711D674E860041F4EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1B24701D674E860041F4EC /* GoogleService-Info.plist */; };
 		5D1B24741D6750350041F4EC /* AAGoogleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24731D6750350041F4EC /* AAGoogleViewController.m */; };
 		5D1B24771D6B04D50041F4EC /* AALinkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */; };
-		5D1B247A1D6B1B8B0041F4EC /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */; };
 		5D1B247D1D6C76920041F4EC /* AALinkedInWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */; };
+		90777DBD1D82B78C00787D68 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1B24791D6B1B8B0041F4EC /* linkedin-sdk.framework */; };
 		907AC67E1D54C2F000137CBE /* AAImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AC67C1D54C2F000137CBE /* AAImageSelectionViewController.m */; };
 		907AC67F1D54C2F000137CBE /* AAImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907AC67D1D54C2F000137CBE /* AAImageSelectionViewController.xib */; };
 		909E1BEB1D58B33A0097F0C2 /* AAInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909E1BEA1D58B33A0097F0C2 /* AAInstagramViewController.m */; };
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1B247A1D6B1B8B0041F4EC /* linkedin-sdk.framework in Frameworks */,
+				90777DBD1D82B78C00787D68 /* linkedin-sdk.framework in Frameworks */,
 				90C5F4C31D53572F00997717 /* Social.framework in Frameworks */,
 				249A7596624B24778AC1FEC5 /* Pods_objC_test_social_framework.framework in Frameworks */,
 			);
@@ -103,26 +103,6 @@
 			);
 			name = Vendor;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		5D1B247E1D6C76960041F4EC /* LinkedIn */ = {
-			isa = PBXGroup;
-			children = (
-				5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */,
-				5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */,
-				5D1B247B1D6C76920041F4EC /* AALinkedInWebViewController.h */,
-				5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */,
-			);
-			name = LinkedIn;
-			sourceTree = "<group>";
-		};
-		5D69E3651D7EBE5100AAFBA0 /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
-				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
-			);
-			name = Google;
 			sourceTree = "<group>";
 		};
 		85199B173D3F0DA516E0F486 /* Pods */ = {
@@ -152,8 +132,10 @@
 				CF7A6C381D6B1C40003D6082 /* AAOdnoklassnikiViewController.m */,
 				5D1B24721D6750350041F4EC /* AAGoogleViewController.h */,
 				5D1B24731D6750350041F4EC /* AAGoogleViewController.m */,
-				5D69E3651D7EBE5100AAFBA0 /* Google */,
-				5D1B247E1D6C76960041F4EC /* LinkedIn */,
+				5D1B24751D6B04D50041F4EC /* AALinkedInViewController.h */,
+				5D1B24761D6B04D50041F4EC /* AALinkedInViewController.m */,
+				5D1B247B1D6C76920041F4EC /* AALinkedInWebViewController.h */,
+				5D1B247C1D6C76920041F4EC /* AALinkedInWebViewController.m */,
 			);
 			name = _ViewControllers;
 			sourceTree = "<group>";
@@ -252,7 +234,6 @@
 		90C5F4AB1D53571C00997717 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D1B24701D674E860041F4EC /* GoogleService-Info.plist */,
 				90C5F4AC1D53571C00997717 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -293,7 +274,7 @@
 				TargetAttributes = {
 					90C5F4A71D53571C00997717 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7YR7SK2Q66;
+						DevelopmentTeam = UGFFRZX2C8;
 					};
 				};
 			};
@@ -440,6 +421,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Evgenii Akhmerov (UGFFRZX2C8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -485,6 +467,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Evgenii Akhmerov (UGFFRZX2C8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -511,7 +494,7 @@
 			baseConfigurationReference = DBC15790553674D448CA2DE9 /* Pods-objC_test_social_framework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuri Petukhov (ABR5V73TGH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -529,7 +512,7 @@
 			baseConfigurationReference = 71E5531CB6CF549B3E6ABA20 /* Pods-objC_test_social_framework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuri Petukhov (ABR5V73TGH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

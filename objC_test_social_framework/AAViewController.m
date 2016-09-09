@@ -7,10 +7,13 @@
 //
 
 @import Social;
+@import VK_ios_sdk;
+
 #import "AAViewController.h"
 #import "AAComposeViewController.h"
 #import "UIStoryboard+AAHelper.h"
 #import "AASharingData.h"
+#import "AAConstants.h"
 
 typedef NS_ENUM(NSUInteger, AAEntityType) {
     AAEntityTypeString = 0,
@@ -127,7 +130,12 @@ typedef NS_ENUM(NSUInteger, AANetworkType) {
 }
 
 - (void)activitySharing {
-    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:[AASharingData sharingPack] applicationActivities:nil];
+    //  требуется для интеграции активити элемента. без этого падение на ассерте
+    VKSdk *sdk = [VKSdk initializeWithAppId:VK_APP_ID];
+    
+    VKActivity *activityVK = [[VKActivity alloc] init];
+    
+    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:[AASharingData sharingPack] applicationActivities:@[ activityVK ]];//nil];
     
     activity.completionWithItemsHandler = self.activityCompletionHandler;
     
