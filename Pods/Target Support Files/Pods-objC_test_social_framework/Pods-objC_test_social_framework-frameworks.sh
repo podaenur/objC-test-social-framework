@@ -82,16 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/InstagramKit/InstagramKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/VK-ios-sdk/VK_ios_sdk.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ok-ios-sdk/ok_ios_sdk.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/InstagramKit/InstagramKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/VK-ios-sdk/VK_ios_sdk.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ok-ios-sdk/ok_ios_sdk.framework"
-fi
