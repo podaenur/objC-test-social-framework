@@ -28,12 +28,15 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
-    [[GIDSignIn sharedInstance] handleURL:url
-                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                               annotation:options[UIApplicationLaunchOptionsAnnotationKey]];
-
     [VKSdk processOpenURL:url fromApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
     
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [OKSDK openUrl:url];
+    
+    [VKSdk processOpenURL:url fromApplication:sourceApplication];
     return YES;
 }
 

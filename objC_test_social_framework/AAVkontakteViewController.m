@@ -46,6 +46,36 @@
                         @"email",
                         @"notifications",
                         @"stats" ];
+  
+//  NSArray *scope = @[ @"nickname", @"screen_name", @"sex", @"bdate (birthdate)", @"city", @"country", @"timezone", @"photo", @"photo_medium", @"photo_big", @"has_mobile", @"contacts", @"education", @"online", @"counters", @"relation", @"last_seen", @"activity", @"can_write_private_message", @"can_see_all_posts", @"can_post", @"universities"];
+    
+//    NSArray *scope = @[ @"offline" ];
+  
+//    [VKSdk wakeUpSession:scope completeBlock:^(VKAuthorizationState state, NSError *error) {
+//        if (error) {
+//            NSLog(@"%@", [error description]);
+//        } else {
+////            NSArray *states = @[ @"VKAuthorizationUnknown",
+////                                 @"VKAuthorizationInitialized",
+////                                 @"VKAuthorizationPending",
+////                                 @"VKAuthorizationExternal",
+////                                 @"VKAuthorizationSafariInApp",
+////                                 @"VKAuthorizationWebview",
+////                                 @"VKAuthorizationAuthorized",
+////                                 @"VKAuthorizationError" ];
+////            NSLog(@"%@", states[state]);
+//            
+//            if (state == VKAuthorizationInitialized) {
+//                [VKSdk authorize:scope];
+//            } else if (state == VKAuthorizationAuthorized) {
+//                NSLog(@"Wow. We can work");
+//            } else if (state == VKAuthorizationError) {
+//                NSLog(@"Something went wrong");
+//            } else {
+//                NSLog(@"It is possible??");
+//            }
+//        }
+//    }];
     
     [VKSdk authorize:scope withOptions:VKAuthorizationOptionsDisableSafariController];
 }
