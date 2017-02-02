@@ -1,5 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/google-plus-ios-sdk/google-plus-ios-sdk-1.7.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Public/VK-ios-sdk" "${PODS_ROOT}/Headers/Public/google-plus-ios-sdk" "${PODS_ROOT}/Headers/Public/ok-ios-sdk"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Bolts" "$PODS_CONFIGURATION_BUILD_DIR/Facebook-iOS-SDK" "$PODS_CONFIGURATION_BUILD_DIR/VK-ios-sdk" "$PODS_CONFIGURATION_BUILD_DIR/ok-ios-sdk"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/VK-ios-sdk" -isystem "${PODS_ROOT}/Headers/Public/google-plus-ios-sdk" -isystem "${PODS_ROOT}/Headers/Public/ok-ios-sdk"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Bolts" -l"Facebook-iOS-SDK" -l"VK-ios-sdk" -l"ok-ios-sdk" -framework "AddressBook" -framework "AssetsLibrary" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMotion" -framework "CoreText" -framework "Foundation" -framework "GoogleOpenSource" -framework "GooglePlus" -framework "MediaPlayer" -framework "SafariServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "AudioToolbox" -weak_framework "CoreGraphics" -weak_framework "CoreLocation" -weak_framework "Foundation" -weak_framework "QuartzCore" -weak_framework "Security" -weak_framework "Social" -weak_framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

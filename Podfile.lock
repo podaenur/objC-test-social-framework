@@ -1,3 +1,43 @@
-PODFILE CHECKSUM: 948fdcbb121a8cfee6ecace9b8f081802cec19ae
+PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - Facebook-iOS-SDK (4.1.0):
+    - Bolts (~> 1.1)
+    - Facebook-iOS-SDK/CoreKit (= 4.1.0)
+    - Facebook-iOS-SDK/LoginKit (= 4.1.0)
+    - Facebook-iOS-SDK/ShareKit (= 4.1.0)
+  - Facebook-iOS-SDK/CoreKit (4.1.0):
+    - Bolts (~> 1.1)
+    - Facebook-iOS-SDK/CoreKit/no-arc (= 4.1.0)
+  - Facebook-iOS-SDK/CoreKit/no-arc (4.1.0):
+    - Bolts (~> 1.1)
+  - Facebook-iOS-SDK/LoginKit (4.1.0):
+    - Bolts (~> 1.1)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.1.0):
+    - Bolts (~> 1.1)
+    - Facebook-iOS-SDK/CoreKit
+  - google-plus-ios-sdk (1.7.1)
+  - ok-ios-sdk (2.0.11)
+  - VK-ios-sdk (1.4.4)
+
+DEPENDENCIES:
+  - Facebook-iOS-SDK
+  - google-plus-ios-sdk (~> 1.7.1)
+  - ok-ios-sdk
+  - VK-ios-sdk
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Facebook-iOS-SDK: f42dfb27283bf5f05e3a9edc88459a75b9892d99
+  google-plus-ios-sdk: 47adbe03ea904bdb7aa1c0eca282a23c4686e1bc
+  ok-ios-sdk: ea966537c8122d2c0048fad0dc6cf46eef45b599
+  VK-ios-sdk: 296c3be1bb45faf4d9f9a2ca69dcf6ec71d9d4df
+
+PODFILE CHECKSUM: 5bfbd621c2676aeae872b0ce8909fd792fde8565
 
 COCOAPODS: 1.0.1
